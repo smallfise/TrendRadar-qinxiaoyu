@@ -460,7 +460,6 @@ storage:
 # 基于 LiteLLM 统一接口，支持 100+ AI 提供商
 # ===============================================================
 ai:
-  provider: "custom"
   # LiteLLM 模型格式: provider/model_name
   # 示例:
   #   - deepseek/deepseek-chat (DeepSeek)
@@ -473,9 +472,9 @@ ai:
   
   model: "minimax/MiniMax-M2.5"
 
-  api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
+  api_key: "sk-cp-MMGMQtCU_HIaCxc5v3Ty25B98GTl_fzUAAoSs47nLB6JSDVxJZcHehHURYVrL4U2z-VVo8TJIqj8Cr8o0a_1FTMMygXbOVlweRkxxlf7jSe8bbjKGedsV3g"                       # API Key（建议使用环境变量 AI_API_KEY）
   
-  api_base: "https://api.minimax.io/v1"                      # 自定义 API 端点（可选，大多数情况留空）
+  api_base: ""                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
                                     #
                                     # 💡 超级重要：连接任意兼容 OpenAI 协议的模型商
