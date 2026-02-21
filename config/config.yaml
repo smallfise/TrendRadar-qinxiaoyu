@@ -472,7 +472,7 @@ ai:
   
   model: "minimax/MiniMax-M2.5"
 
-  api_key: "sk-cp-MMGMQtCU_HIaCxc5v3Ty25B98GTl_fzUAAoSs47nLB6JSDVxJZcHehHURYVrL4U2z-VVo8TJIqj8Cr8o0a_1FTMMygXbOVlweRkxxlf7jSe8bbjKGedsV3g"
+  api_key: ""
   # API Key（建议使用环境变量 AI_API_KEY）
   
   api_base: ""                      # 自定义 API 端点（可选，大多数情况留空）
