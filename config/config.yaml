@@ -112,21 +112,140 @@ rss:
   # - 不配置：使用全局 freshness_filter.max_age_days（默认 3 天）
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
-  feeds:
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
-      # max_age_days: 1               # 示例：只推送1天内的文章
+ feeds:
 
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      # max_age_days: 7               # 示例：推送7天内的文章（更新较慢的博客）
-    
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
-      enabled: false                  # 禁用
+    # ━━━ 中文博客 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    - id: "nightola-227fm"
+      name: "Nightola-227 FM"
+      url: "https://nightola.bearblog.dev/feed"
+
+    - id: "61s-life"
+      name: "61's life"
+      url: "https://61.life/feed.xml"
+
+    - id: "caobianwangshi"
+      name: "槽边往事"
+      url: "https://www.hecaitou.com/feeds/posts/default?alt=rss"
+
+    - id: "chencanjie"
+      name: "陈仓颉"
+      url: "https://imzm.im/feed/"
+
+    - id: "fangtang07"
+      name: "方糖07"
+      url: "https://ft07.com/feed/"
+
+    - id: "jiaoyan-douchi"
+      name: "椒盐豆豉"
+      url: "https://blog.douchi.space/index.xml"
+
+    - id: "albus-pensieve"
+      name: "Albus' Pensieve | 邓布利多的冥想盆"
+      url: "https://pensieve.wangxindi.org//feed"
+
+    - id: "another-dayu"
+      name: "Another Dayu"
+      url: "https://anotherdayu.com/feed/"
+
+    - id: "solazy"
+      name: "So!azy"
+      url: "https://blog.solazy.me/feed/"
+
+    # ━━━ 英文博客 / 个人成长 ━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    - id: "dan-koe-blog"
+      name: "Dan Koe (Blog)"
+      url: "https://thedankoe.com/feed/"
+
+    - id: "escaping-flatland"
+      name: "Escaping Flatland"
+      url: "https://www.henrikkarlsson.xyz/feed"
+
+    - id: "gretchen-rubin"
+      name: "Gretchen Rubin"
+      url: "https://gretchenrubin.com/feed/"
+
+    - id: "james-clear"
+      name: "James Clear"
+      url: "https://jamesclear.com/rss"
+
+    - id: "mindbodygreen"
+      name: "mindbodygreen"
+      url: "https://www.mindbodygreen.com/rss.xml"
+
+    - id: "mj-davis"
+      name: "MJ Davis"
+      url: "https://www.optimallifeimprovement.com/mj-davis?format=rss"
+
+    - id: "seth-godin"
+      name: "Seth's Blog"
+      url: "https://seths.blog/feed/"
+
+    - id: "tim-ferriss"
+      name: "The Blog of Author Tim Ferriss"
+      url: "https://tim.blog/feed/"
+
+    # ━━━ YouTube 频道 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    # ⚠️ GitHub Actions 可能无法直接访问 youtube.com
+    #    如果抓取失败，改用 RSSHub 路由:
+    #    url: "https://rsshub.app/youtube/channel/频道ID"
+
+    - id: "xueqiu-youtube"
+      name: "雪球 (YouTube)"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsFos_f_FDkZDoyqp_Dozxw"
+
+    - id: "dan-koe-youtube"
+      name: "Dan Koe (YouTube)"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCWXYDYv5STLk-zoxMP2I1Lw"
+
+    - id: "zen-habits-youtube"
+      name: "Zen Habits (YouTube)"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7Z1iJTigJLSsRN9StrQMvA"
+
+    # ━━━ 微信公众号 (via wechat2rss) ━━━━━━━━━━━━━━━━━
+    # ⚠️ 依赖 wechat2rss.bestblogs.dev 第三方服务
+
+    - id: "liuxiaopai"
+      name: "刘小排r"
+      url: "https://wechat2rss.bestblogs.dev/feed/484d4199ae6c0b72ea01e7e0597a1f74933dfb62.xml"
+
+    - id: "shuzishengming-kazike"
+      name: "数字生命卡兹克"
+      url: "https://wechat2rss.bestblogs.dev/feed/ff621c3e98d6ae6fceb3397e57441ffc6ea3c17f.xml"
+
+    # ━━━ RSSHub 源 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    # ⚠️ 依赖 rsshub.app 公共实例，可替换为自建实例
+
+    - id: "caogao-shiyi"
+      name: "草稿拾遗"
+      url: "https://rsshub.app/zhiy/letters/messy"
+
+    - id: "ariannita-la-gringa"
+      name: "Ariannita la Gringa (YouTube via RSSHub)"
+      url: "https://rsshub.app/youtube/user/@ariannitalagringa"
+
+    - id: "daily-dev-discussed"
+      name: "daily.dev 热门讨论"
+      url: "https://rsshub.app/daily/discussed"
+
+    # ━━━ 科技 / 资讯媒体 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    - id: "sspai"
+      name: "少数派"
+      url: "https://sspai.com/feed"
+
+    - id: "bearblog-trending"
+      name: "Bear Blog Trending Posts"
+      url: "https://bearblog.dev/discover/feed/?type=rss"
+
+    - id: "netnewswire"
+      name: "NetNewsWire News"
+      url: "https://netnewswire.blog/feed.xml"
+
+    - id: "openai-news"
+      name: "OpenAI News"
+      url: "https://openai.com/news/rss.xml"
 
     # 自定义源示例
     # - id: "custom-feed"
