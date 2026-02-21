@@ -274,7 +274,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
@@ -320,14 +320,14 @@ display:
   # 控制各区域是否启用（配合 region_order 使用）
   regions:
     hotlist: true                     # 热榜区域（关键词匹配的热点新闻）
-    new_items: false                   # 新增热点区域（含热榜新增 + RSS 新增）
+    new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
-    rss: true                         # RSS 订阅区域
+    rss: false                         # RSS 订阅区域
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
-    standalone: false                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
+    standalone: true                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true                 # AI 分析区域
 
   # 📋 独立展示区配置
@@ -338,8 +338,8 @@ display:
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
     platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 20                     # 每个源最多展示条数（0=不限制）
+    rss_feeds: ["nightola-227fm", "61s-life", "caobianwangshi", "chencanjie", "fangtang07", "jiaoyan-douchi", "albus-pensieve", "another-dayu", "solazy", "dan-koe-blog", "escaping-flatland", "gretchen-rubin", "james-clear", "mindbodygreen", "mj-davis", "seth-godin", "tim-ferriss", "xueqiu-youtube", "dan-koe-youtube", "zen-habits-youtube", "liuxiaopai", "shuzishengming-kazike", "caogao-shiyi", "ariannita-la-gringa", "daily-dev-discussed", "sspai", "bearblog-trending"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
+    max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
