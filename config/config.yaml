@@ -77,6 +77,10 @@ platforms:
       name: "抖音"
     - id: "zhihu"
       name: "知乎"
+    - id: "kaopu"
+      name: "靠谱新闻"
+    - id: "xueqiu"
+      name: "雪球"
 
 
 
@@ -113,139 +117,48 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-
-    # ━━━ 中文博客 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-    - id: "nightola-227fm"
-      name: "Nightola-227 FM"
-      url: "https://nightola.bearblog.dev/feed"
-
-    - id: "61s-life"
-      name: "61's life"
-      url: "https://61.life/feed.xml"
-
-    - id: "caobianwangshi"
-      name: "槽边往事"
-      url: "https://www.hecaitou.com/feeds/posts/default?alt=rss"
-
-    - id: "chencanjie"
-      name: "陈仓颉"
-      url: "https://imzm.im/feed/"
-
-    - id: "fangtang07"
-      name: "方糖07"
-      url: "https://ft07.com/feed/"
-
-    - id: "jiaoyan-douchi"
-      name: "椒盐豆豉"
-      url: "https://blog.douchi.space/index.xml"
-
-    - id: "albus-pensieve"
-      name: "Albus' Pensieve | 邓布利多的冥想盆"
-      url: "https://pensieve.wangxindi.org//feed"
-
-    - id: "another-dayu"
-      name: "Another Dayu"
-      url: "https://anotherdayu.com/feed/"
-
-    - id: "solazy"
-      name: "So!azy"
-      url: "https://blog.solazy.me/feed/"
-
-    # ━━━ 英文博客 / 个人成长 ━━━━━━━━━━━━━━━━━━━━━━━━━
-
-    - id: "dan-koe-blog"
-      name: "Dan Koe (Blog)"
-      url: "https://thedankoe.com/feed/"
-
-    - id: "escaping-flatland"
-      name: "Escaping Flatland"
-      url: "https://www.henrikkarlsson.xyz/feed"
-
-    - id: "gretchen-rubin"
-      name: "Gretchen Rubin"
-      url: "https://gretchenrubin.com/feed/"
-
-    - id: "james-clear"
-      name: "James Clear"
-      url: "https://jamesclear.com/rss"
-
-    - id: "mindbodygreen"
-      name: "mindbodygreen"
-      url: "https://www.mindbodygreen.com/rss.xml"
-
-    - id: "mj-davis"
-      name: "MJ Davis"
-      url: "https://www.optimallifeimprovement.com/mj-davis?format=rss"
-
-    - id: "seth-godin"
-      name: "Seth's Blog"
+    - id: "seths"
+      name: "seths"
       url: "https://seths.blog/feed/"
 
-    - id: "tim-ferriss"
-      name: "The Blog of Author Tim Ferriss"
-      url: "https://tim.blog/feed/"
+    - id: "solazy"
+      name: "solazy"
+      url: "https://blog.solazy.me/feed/"
 
-    # ━━━ YouTube 频道 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    # ⚠️ GitHub Actions 可能无法直接访问 youtube.com
-    #    如果抓取失败，改用 RSSHub 路由:
-    #    url: "https://rsshub.app/youtube/channel/频道ID"
+    - id: "gretchenrubin"
+      name: "gretchenrubin"
+      url: "https://gretchenrubin.com/feed/"
 
-    - id: "xueqiu-youtube"
-      name: "雪球 (YouTube)"
-      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsFos_f_FDkZDoyqp_Dozxw"
-
-    - id: "dan-koe-youtube"
-      name: "Dan Koe (YouTube)"
+    - id: "DanKoe"
+      name: "DanKoe"
       url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCWXYDYv5STLk-zoxMP2I1Lw"
 
-    - id: "zen-habits-youtube"
-      name: "Zen Habits (YouTube)"
-      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7Z1iJTigJLSsRN9StrQMvA"
-
-    # ━━━ 微信公众号 (via wechat2rss) ━━━━━━━━━━━━━━━━━
-    # ⚠️ 依赖 wechat2rss.bestblogs.dev 第三方服务
-
-    - id: "liuxiaopai"
-      name: "刘小排r"
-      url: "https://wechat2rss.bestblogs.dev/feed/484d4199ae6c0b72ea01e7e0597a1f74933dfb62.xml"
-
-    - id: "shuzishengming-kazike"
+    - id: "kazike"
       name: "数字生命卡兹克"
       url: "https://wechat2rss.bestblogs.dev/feed/ff621c3e98d6ae6fceb3397e57441ffc6ea3c17f.xml"
 
-    # ━━━ RSSHub 源 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    # ⚠️ 依赖 rsshub.app 公共实例，可替换为自建实例
+    - id: "liuxiaopai"
+      name: "刘小排"
+      url: "https://wechat2rss.bestblogs.dev/feed/484d4199ae6c0b72ea01e7e0597a1f74933dfb62.xml"
 
-    - id: "caogao-shiyi"
-      name: "草稿拾遗"
-      url: "https://rsshub.app/zhiy/letters/messy"
+    - id: "life"
+      name: "61life"
+      url: "https://61.life/feed.xml"
 
-    - id: "ariannita-la-gringa"
-      name: "Ariannita la Gringa (YouTube via RSSHub)"
-      url: "https://rsshub.app/youtube/user/@ariannitalagringa"
+    - id: "pensieve"
+      name: "pensieve"
+      url: "https://pensieve.wangxindi.org//feed"
 
-    - id: "daily-dev-discussed"
-      name: "daily.dev 热门讨论"
-      url: "https://rsshub.app/daily/discussed"
 
-    # ━━━ 科技 / 资讯媒体 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-    - id: "sspai"
-      name: "少数派"
-      url: "https://sspai.com/feed"
 
-    - id: "bearblog-trending"
-      name: "Bear Blog Trending Posts"
-      url: "https://bearblog.dev/discover/feed/?type=rss"
 
-    - id: "netnewswire"
-      name: "NetNewsWire News"
-      url: "https://netnewswire.blog/feed.xml"
 
-    - id: "openai-news"
-      name: "OpenAI News"
-      url: "https://openai.com/news/rss.xml"
+
+
+
+
+
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -320,14 +233,14 @@ display:
   # 控制各区域是否启用（配合 region_order 使用）
   regions:
     hotlist: true                     # 热榜区域（关键词匹配的热点新闻）
-    new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
+    new_items: false                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
-    rss: false                         # RSS 订阅区域
+    rss: true                         # RSS 订阅区域
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
-    standalone: true                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
+    standalone: false                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true                 # AI 分析区域
 
   # 📋 独立展示区配置
@@ -337,9 +250,9 @@ display:
   #   - AI 分析：由 ai.include_standalone 开关控制，将完整数据送入 AI 做深度分析
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
-    platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["nightola-227fm", "61s-life", "caobianwangshi", "chencanjie", "fangtang07", "jiaoyan-douchi", "albus-pensieve", "another-dayu", "solazy", "dan-koe-blog", "escaping-flatland", "gretchen-rubin", "james-clear", "mindbodygreen", "mj-davis", "seth-godin", "tim-ferriss", "xueqiu-youtube", "dan-koe-youtube", "zen-habits-youtube", "liuxiaopai", "shuzishengming-kazike", "caogao-shiyi", "ariannita-la-gringa", "daily-dev-discussed", "sspai", "bearblog-trending"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 10                     # 每个源最多展示条数（0=不限制）
+    platforms: ["zhihu","wallstreetcn-hot","toutiao","cls-hot","bilibili-hot-search","douyin","kaopu","xueqiu","thepaper"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: ["seths","solazy","gretchenrubin","DanKoe","kazike","liuxiaopai","life","pensieve"] # RSS 源 ID 列表（如 ["hacker-news"]）
+    max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
@@ -472,11 +385,9 @@ ai:
   
   model: "minimax/MiniMax-M2.5"
 
-  api_key: ""
-  # API Key（建议使用环境变量 AI_API_KEY）
+  api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
   
-  api_base: "https://api.minimaxi.com/v1"                      
-                                    # 自定义 API 端点（可选，大多数情况留空）
+  api_base: "https://api.minimaxi.com/v1"                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
                                     #
                                     # 💡 超级重要：连接任意兼容 OpenAI 协议的模型商
@@ -564,7 +475,7 @@ ai_analysis:
                                       # GitHub Action 部署默认推送约 20 次（每小时推送一次）， 约 0.1 元/天
                                       # Docker 部署默认推送 48 次(每半小时推送一次)， 约 0.2 元/天
 
-  include_rss: true               # 是否包含 RSS 内容进行分析
+  include_rss: true                # 是否包含 RSS 内容进行分析
   
   include_standalone: true          # 是否将独立展示区数据纳入 AI 分析（只需上方 display 区的 standalone 配置了平台/RSS 即可）
 
